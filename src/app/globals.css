@@ -1,0 +1,37 @@
+@import "tailwindcss";
+:root {
+  --background: #EEDAAE;
+  --background--secondary: #202147;
+  --font-color: #343434;
+  --font-color-secondary: #E13A4B;
+  --font-color-primary-10: #EACD8D;
+}
+
+@theme inline {
+  --color-primary: var(--background);
+  --color-secondary: var(--background--secondary);
+  --color-font: var(--font-color);
+  --color-font-secondary: var(--font-color-secondary);
+  --color-black-opacity-10: #0000001a;
+  --color-primary-opacity-10: var(--font-color-primary-10);
+}
+
+@font-face {
+  font-family: 'Electroharmonix';
+  src: url('/fonts/Electroharmonix.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Electroharmonix', sans-serif;
+}
+
+svg {
+  color: var(--font-color);
+}
+
+svg:hover {
+  color: var(--background--secondary);
+}
