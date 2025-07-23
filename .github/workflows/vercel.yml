@@ -1,23 +1,19 @@
 name: Deploy to Vercel (Alternative)
 
-# This workflow deploys to Vercel where API routes work
-# To use this deployment method:
-# 1. Install Vercel CLI: npm i -g vercel
-# 2. Connect your repository to Vercel
-# 3. Set environment variables in Vercel dashboard
-# 4. Enable this workflow by uncommenting the 'on' section
+# This workflow deploys to Vercel when changes are pushed to main or a PR is made
 
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -26,14 +22,14 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build application
+      - name: Build Application
         run: npm run build
         env:
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
-          CONTACT_PASS: ${{ secrets.CONTACT_PASS }}
+          CONTACT_PASSWORD: ${{ secrets.CONTACT_PASSWORD }}
           CONTACT_RECEIVER: ${{ secrets.CONTACT_RECEIVER }}
 
       - name: Deploy to Vercel
