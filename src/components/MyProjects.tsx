@@ -1,6 +1,7 @@
 "use client";
 import Projects from "@/config/Projects";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const MyProjects = () => {
@@ -114,13 +115,16 @@ const MyProjects = () => {
               {/* Image & Description */}
               <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
                 {/* Image */}
-                <div className="flex-grow basis-1/2 flex items-center justify-center">
+                <div className="relative flex-grow basis-1/2 flex items-center justify-center group">
+                  <Link href={Projects[currentProjectIndex].link} className="absolute z-50 mix-blend-difference text-white text-xl font-semibold inset-0 flex items-center justify-center transition-all duration-300 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+                    Preview
+                  </Link>
                   <Image
-                    src={Projects[currentProjectIndex].image || "/carbon.png"}
+                    src={Projects[currentProjectIndex].image || "/projects/404.png"}
                     alt={Projects[currentProjectIndex].title}
                     width={300}
                     height={200}
-                    className="rounded-md object-contain border-4 border-double border-font-secondary w-full h-auto max-w-full"
+                    className="rounded-md object-contain border-4 border-double border-font-secondary w-full h-auto max-w-full group-hover:blur-md group-hover:scale-105 transition-all duration-300"
                   />
                 </div>
 

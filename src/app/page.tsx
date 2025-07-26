@@ -7,13 +7,13 @@ import Skills from "@/components/Skills";
 import WorkExperiences from "@/config/Experiences"
 export default function HomePage() {
   return (
-    <div>
+    <>
       <Navbar/>
       <Home />
       <Skills />
       <MyProjects />
-      {WorkExperiences.length && (<WorkExperience />)}
+      <WorkExperience />
       <ContactMe />
-    </div>
+    </>
   );
 }

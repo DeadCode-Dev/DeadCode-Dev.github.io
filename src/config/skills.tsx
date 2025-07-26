@@ -1,4 +1,9 @@
-const skills = [
+interface SkillCategory {
+  category: string;
+  skills: string[];
+}
+
+const skills: SkillCategory[] = [
   {
     category: 'FrontEnd',
     skills: [

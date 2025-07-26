@@ -1,29 +1,28 @@
-const Projects = [
-    {
-        title: "My Portfolio",
-        description: "A personal portfolio website to showcase my projects and skills.",
-        image: "",
-        link: "",
-        tags: ["Web Development", "Portfolio", "React"],
-        date: "2023-01-15",
+interface Project {
+    title: string;
+    description: string;
+    image?: string;
+    link: string;
+    tags: string[];
+    date: string; // ISO date format
+}
 
+const Projects: Project[] = [
+    {
+        title: "E-commerce Frontend",
+        description: "A full-featured e-commerce frontend built with React, supporting product management, user authentication, and payment processing.",
+        image: "/projects/ecommerce.png",
+        link: "https://fashion-ecommerce-gules.vercel.app/",
+        tags: ["React", "Rest API", "Tailwind CSS", "TypeScript"],
+        date: "2023-11-13"
     },
     {
-        title: "Weather App",
-        description: "A weather application that provides real-time weather updates.",
-        image: "",
-        link: "",
-        tags: ["Web Development", "React", "API"],
-        date: "2023-02-20",
-    },
-    {
-        title: "E-commerce Platform",
-        description: "An e-commerce platform built with React and Node.js.",
-        image: "",
-        link: "",
-        tags: ["Web Development", "E-commerce", "Full Stack"],
-        date: "2023-03-10",
-    },
+        title: "E-commerce Backend",
+        description: "A robust backend for an e-commerce platform, handling product management, user authentication, and payment processing.",
+        link: "https://github.com/DeadCode-Dev/E-commerce-backend",
+        tags: ["Node.js", "Express.js", "SQL", "REST API"],
+        date: "2025-07-26"
+    }
 ];
 
 export default Projects;

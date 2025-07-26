@@ -1,17 +1,29 @@
+import { JSX } from 'react';
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
 
-const ContactInformations = {
+interface Account {
+    platform: string;
+    url: string;
+    Icon: JSX.Element;
+}
+
+interface ContactInformation {
+    Name: string;
+    Accounts: Account[];
+}
+
+const ContactInformations: ContactInformation = {
     Name: "Antonious Youssef",
     Accounts: [
         {
             platform: "GitHub",
-            url: "https://github.com/antonious",
+            url: "https://github.com/DeadCode-Dev/",
             Icon: <FaGithub size={24} />
         },
         {
             platform: "LinkedIn",
-            url: "https://linkedin.com/in/antonious",
+            url: "https://www.linkedin.com/in/tony-yousef/",
             Icon: <FaLinkedin size={24} />
         },
         {
@@ -21,7 +33,7 @@ const ContactInformations = {
         },
         {
             platform: "Email",
-            url: "mailto:contact@antonious.com",
+            url: "mailto:contact@antonious.me",
             Icon: <MdOutlineEmail size={24} />
         }
     ]
