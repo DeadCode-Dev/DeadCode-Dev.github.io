@@ -51,7 +51,7 @@ const MyProjects = () => {
       id="myprojects"
       className="bg-[url('/myprojects.png')] bg-cover bg-center bg-primary min-h-screen w-full flex flex-col items-center justify-start px-2 sm:px-4 py-8 overflow-x-hidden"
     >
-      <h1 className="text-3xl sm:text-4xl md:text-6xl text-secondary font-bold mb-16 text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl text-secondary font-bold mb-16 text-center font-decorative">
         My Projects
       </h1>
 
@@ -101,7 +101,7 @@ const MyProjects = () => {
                   width={40}
                   height={40}
                 />
-                <span className="text-font-secondary truncate">
+                <span className="text-font-secondary truncate font-readable">
                   {Projects[currentProjectIndex].title}
                 </span>
                 <Image
@@ -116,7 +116,7 @@ const MyProjects = () => {
               <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
                 {/* Image */}
                 <div className="relative flex-grow basis-1/2 flex items-center justify-center group">
-                  <Link href={Projects[currentProjectIndex].link} className="absolute z-50 mix-blend-difference text-white text-xl font-semibold inset-0 flex items-center justify-center transition-all duration-300 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+                  <Link href={Projects[currentProjectIndex].link} className="absolute z-50 mix-blend-difference text-white text-xl font-semibold inset-0 flex items-center justify-center transition-all duration-300 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 font-readable">
                     Preview
                   </Link>
                   <Image
@@ -129,7 +129,7 @@ const MyProjects = () => {
                 </div>
 
                 {/* Description */}
-                <div className="flex flex-col justify-between flex-grow basis-1/2">
+                <div className="flex flex-col justify-between flex-grow basis-1/2 font-readable">
                   <p className="text-sm text-font mb-4 overflow-y-auto max-h-40">
                     {Projects[currentProjectIndex].description}
                   </p>

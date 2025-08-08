@@ -42,7 +42,7 @@ const WorkExperience = () => {
       id="experience"
       className="bg-[url('/skills.png')] bg-cover bg-center bg-no-repeat bg-secondary h-screen w-full flex flex-col items-center overflow-hidden px-4 sm:px-8"
     >
-      <h1 className="text-3xl sm:text-4xl md:text-6xl text-primary font-bold mt-8 mb-4 text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl text-primary font-bold mt-8 mb-4 text-center font-decorative">
         Work Experience
       </h1>
 
@@ -59,7 +59,7 @@ const WorkExperience = () => {
 
         {/* Skill Card with Swipe */}
         <div
-          className={`mx-2 sm:mx-6 flex-grow max-w-3xl w-full p-6 sm:p-9 transition-all duration-300 transform ${
+          className={`mx-2 sm:mx-6 flex-grow max-w-3xl w-full p-6 sm:p-9 transition-all duration-300 transform font-readable ${
             animating ? "opacity-0 scale-95" : "opacity-100 scale-100"
           }`}
           onTouchStart={handleTouchStart}
