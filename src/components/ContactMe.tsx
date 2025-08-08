@@ -43,20 +43,20 @@ const ContactMe = () => {
       id="contact"
       className="bg-[url('/myprojects.png')] bg-cover bg-primary bg-center min-h-screen w-full flex flex-col items-center px-4 sm:px-6 py-10 text-font-color"
     > 
-      <h1 className="text-3xl sm:text-4xl md:text-6xl text-secondary font-bold mb-12 text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl text-secondary font-bold mb-12 text-center font-decorative">
         Contact Me
       </h1>
 
       <div className="w-full max-w-7xl flex flex-col gap-10">
         {/* Contact Form */}
         {success && (
-          <div className="w-full mb-4 text-green-600 bg-green-100 border border-green-300 rounded p-3 text-center">
+          <div className="w-full mb-4 text-green-600 bg-green-100 border border-green-300 rounded p-3 text-center font-readable">
             Message sent successfully!
           </div>
         )}
         <form
           onSubmit={handleSubmit}
-          className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6 m-auto"
+          className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6 m-auto font-readable"
         >
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-1 text-font-secondary">

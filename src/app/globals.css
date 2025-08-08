@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
   --background: #EEDAAE;
   --background--secondary: #202147;
@@ -24,8 +26,22 @@
   font-display: swap;
 }
 
+/* Font Hierarchy System */
 body {
-  font-family: 'Electroharmonix', sans-serif;
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Decorative font for branding elements only */
+.font-decorative {
+  font-family: 'Electroharmonix', 'Noto Sans JP', 'Inter', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Clean readable font for UI and content */
+.font-readable {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  letter-spacing: 0.02em;
 }
 
 svg {

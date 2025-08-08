@@ -42,7 +42,7 @@ const Skills = () => {
       id="skills"
       className="bg-[url('/skills.png')] bg-cover bg-center bg-no-repeat bg-secondary h-screen w-full flex flex-col items-center overflow-hidden px-4 sm:px-8"
     >
-      <h1 className="text-3xl sm:text-4xl md:text-6xl text-primary font-bold mt-8 mb-4 text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl text-primary font-bold mt-8 mb-4 text-center font-decorative">
         My Skills
       </h1>
 
@@ -65,10 +65,10 @@ const Skills = () => {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <h2 className="text-lg sm:text-xl font-bold text-font-secondary text-center mb-4">
+          <h2 className="text-lg sm:text-xl font-bold text-font-secondary text-center mb-4 font-readable">
             {skills[page].category}
           </h2>
-          <div className="flex flex-wrap justify-center gap-3 max-h-96 overflow-y-auto">
+          <div className="flex flex-wrap justify-center gap-3 max-h-96 overflow-y-auto font-readable">
             {skills[page].skills.map((item, idx) => (
               <div
                 key={idx}
