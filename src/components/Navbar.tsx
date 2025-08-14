@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href="#myprojects" className="text-[var(--font-color)] hover:underline hover:decoration-font-secondary hover:decoration-2" >
           Projects
         </Link>
-        <Link href="/resume.html" target="_blank" className="text-[var(--font-color)] hover:underline hover:decoration-font-secondary hover:decoration-2" >
+        <Link href="/resume.pdf" target="_blank" className="text-[var(--font-color)] hover:underline hover:decoration-font-secondary hover:decoration-2" >
           Resume
         </Link>
         <Link href="#contact" className="text-[var(--font-color)] hover:underline hover:decoration-font-secondary hover:decoration-2" >
